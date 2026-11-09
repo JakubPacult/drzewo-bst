@@ -13,6 +13,7 @@
   * @return int Kod wyjścia programu.
   */
 int main() {
+	std::cout << "=== Program do zarządzania drzewem BST ===\n"; 
     BST drzewo;
     int wybór;
 
