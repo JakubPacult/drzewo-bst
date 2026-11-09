@@ -1,0 +1,174 @@
+\doxysection{BST Class Reference}
+\hypertarget{class_b_s_t}{}\label{class_b_s_t}\index{BST@{BST}}
+
+
+Klasa zarządzająca drzewem poszukiwań binarnych (\doxylink{class_b_s_t}{BST}).  
+
+
+
+
+{\ttfamily \+\#include $<$BST.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}\label{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178} 
+{\bfseries BST} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. Tworzy puste drzewo. \end{DoxyCompactList}\item 
+\Hypertarget{class_b_s_t_aff9c7948fbba37844d2893b920ddc238}\label{class_b_s_t_aff9c7948fbba37844d2893b920ddc238} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+BST} ()
+\begin{DoxyCompactList}\small\item\em Destruktor. Zwalnia pamięć zajmowaną przez całe drzewo. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_b_s_t_a434822ba327e37a18db6e29a9aeabb08}{insert}} (int value)
+\begin{DoxyCompactList}\small\item\em Dodaje nowy element do drzewa \doxylink{class_b_s_t}{BST}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_b_s_t_a5ecfaa5038e8b25a46300747b3d53f20}{remove}} (int value)
+\begin{DoxyCompactList}\small\item\em Usuwa element z drzewa \doxylink{class_b_s_t}{BST}. \end{DoxyCompactList}\item 
+\Hypertarget{class_b_s_t_ac4c25c29469df59a243c920423ed6d75}\label{class_b_s_t_ac4c25c29469df59a243c920423ed6d75} 
+void {\bfseries clear} ()
+\begin{DoxyCompactList}\small\item\em Usuwa całe drzewo i zwalnia pamięć. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_b_s_t_a66e23d890fdf7ee1583427bf778c4f23}{find\+Path}} (int value, std::\+vector$<$ int $>$ \&path)
+\begin{DoxyCompactList}\small\item\em Szuka drogi od korzenia do zadanego elementu. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_b_s_t_ae0a2cd839fe9bff168f3112a83ac1cfe}{display}} (int method)
+\begin{DoxyCompactList}\small\item\em Wyświetla zawartość drzewa wybraną metodą. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_b_s_t_a10d8a5b1975b4105dda536bbaf3354f8}{save\+To\+File\+Text}} (const std::\+string \&filename)
+\begin{DoxyCompactList}\small\item\em Zapisuje drzewo do pliku tekstowego. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_b_s_t_a4d3ded5a59583af64a6e2b030cce08e3}{is\+Empty}} () const
+\begin{DoxyCompactList}\small\item\em Sprawdza, czy drzewo jest puste. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{class_b_s_t_a810fa02ccb9421de222e549e0d969bee}{get\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Zwraca wskaźnik na korzeń drzewa. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_b_s_t_af38a08885b616b043517270887a4e334}{set\+Root}} (\doxymbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}new\+Root)
+\begin{DoxyCompactList}\small\item\em Ustawia nowy korzeń drzewa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Klasa zarządzająca drzewem poszukiwań binarnych (\doxylink{class_b_s_t}{BST}). 
+
+\label{class_b_s_t_doc-func-members}
+\Hypertarget{class_b_s_t_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_b_s_t_ae0a2cd839fe9bff168f3112a83ac1cfe}\index{BST@{BST}!display@{display}}
+\index{display@{display}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{display()}{display()}}
+{\footnotesize\ttfamily \label{class_b_s_t_ae0a2cd839fe9bff168f3112a83ac1cfe} 
+void BST::\+display (\begin{DoxyParamCaption}\item[{int}]{method}{}\end{DoxyParamCaption})}
+
+
+
+Wyświetla zawartość drzewa wybraną metodą. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em method} & Metoda przechodzenia (1: Preorder, 2: Inorder, 3: Postorder). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_a66e23d890fdf7ee1583427bf778c4f23}\index{BST@{BST}!findPath@{findPath}}
+\index{findPath@{findPath}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{findPath()}{findPath()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a66e23d890fdf7ee1583427bf778c4f23} 
+bool BST::\+find\+Path (\begin{DoxyParamCaption}\item[{int}]{value}{, }\item[{std::\+vector$<$ int $>$ \&}]{path}{}\end{DoxyParamCaption})}
+
+
+
+Szuka drogi od korzenia do zadanego elementu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Szukana wartość. \\
+\hline
+{\em path} & Referencja na wektor, do którego zostanie wpisana ścieżka. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jeśli element znaleziono, false w przeciwnym razie. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_a810fa02ccb9421de222e549e0d969bee}\index{BST@{BST}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a810fa02ccb9421de222e549e0d969bee} 
+\doxymbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} BST::\+get\+Root (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Zwraca wskaźnik na korzeń drzewa. 
+
+\begin{DoxyReturn}{Returns}
+Node\texorpdfstring{$\ast$}{*} Wskaźnik do korzenia. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_a434822ba327e37a18db6e29a9aeabb08}\index{BST@{BST}!insert@{insert}}
+\index{insert@{insert}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a434822ba327e37a18db6e29a9aeabb08} 
+void BST::\+insert (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Dodaje nowy element do drzewa \doxylink{class_b_s_t}{BST}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Wartość do dodania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_a4d3ded5a59583af64a6e2b030cce08e3}\index{BST@{BST}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a4d3ded5a59583af64a6e2b030cce08e3} 
+bool BST::\+is\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Sprawdza, czy drzewo jest puste. 
+
+\begin{DoxyReturn}{Returns}
+true jeśli puste, false w przeciwnym razie. 
+\end{DoxyReturn}
+\Hypertarget{class_b_s_t_a5ecfaa5038e8b25a46300747b3d53f20}\index{BST@{BST}!remove@{remove}}
+\index{remove@{remove}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a5ecfaa5038e8b25a46300747b3d53f20} 
+void BST::\+remove (\begin{DoxyParamCaption}\item[{int}]{value}{}\end{DoxyParamCaption})}
+
+
+
+Usuwa element z drzewa \doxylink{class_b_s_t}{BST}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Wartość do usunięcia. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_a10d8a5b1975b4105dda536bbaf3354f8}\index{BST@{BST}!saveToFileText@{saveToFileText}}
+\index{saveToFileText@{saveToFileText}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{saveToFileText()}{saveToFileText()}}
+{\footnotesize\ttfamily \label{class_b_s_t_a10d8a5b1975b4105dda536bbaf3354f8} 
+void BST::\+save\+To\+File\+Text (\begin{DoxyParamCaption}\item[{const std::\+string \&}]{filename}{}\end{DoxyParamCaption})}
+
+
+
+Zapisuje drzewo do pliku tekstowego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Nazwa pliku wyjściowego. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_b_s_t_af38a08885b616b043517270887a4e334}\index{BST@{BST}!setRoot@{setRoot}}
+\index{setRoot@{setRoot}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{setRoot()}{setRoot()}}
+{\footnotesize\ttfamily \label{class_b_s_t_af38a08885b616b043517270887a4e334} 
+void BST::\+set\+Root (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{new\+Root}{}\end{DoxyParamCaption})}
+
+
+
+Ustawia nowy korzeń drzewa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Root} & Wskaźnik do nowego korzenia. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+src/\+\+BST/\doxymbox{\hyperlink{_b_s_t_8h}{BST.\+h}}\item 
+src/\+\+BST/\doxymbox{\hyperlink{_b_s_t_8cpp}{BST.\+cpp}}\end{DoxyCompactItemize}
