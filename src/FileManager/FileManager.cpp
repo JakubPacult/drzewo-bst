@@ -1,6 +1,7 @@
 /**
  * @file FileManager.cpp
  * @brief Implementacja metod klasy FileManager.
+ * @details Commit: f7c4e2a - dodano serializacjê binarn¹ drzewa BST oraz obs³ugê plików tekstowych.
  */
 
 #include "FileManager.h"
