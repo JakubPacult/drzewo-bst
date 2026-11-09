@@ -14,13 +14,8 @@
   * @return int Kod wyjścia programu.
   */
 int main() {
-<<<<<<< HEAD
 	std::cout << "=== Program do zarządzania drzewem BST ===\n"; 
-=======
-    // Informacja o wersji / commitcie widoczna przy starcie
-    std::cout << "[Wersja / Commit: f7c4e2a - BST App v1.2]\n";
 
->>>>>>> main
     BST drzewo;
     int wybór;
 
