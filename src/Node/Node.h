@@ -4,6 +4,7 @@
 /**
  * @file Node.h
  * @brief Definicja struktury węzła drzewa BST.
+ * @details Commit: f7c4e2a - struktura podstawowego węzła z wskaźnikami na lewe i prawe poddrzewo.
  */
 
  /**
@@ -11,9 +12,9 @@
   * @brief Reprezentuje pojedynczy węzeł w drzewie poszukiwań binarnych (BST).
   */
 struct Node {
-    int data;       ///< Wartość przechowywana w węźle.
-    Node* left;     ///< Wskaźnik na lewe poddrzewo.
-    Node* right;    ///< Wskaźnik na prawe poddrzewo.
+    int data;         ///< Wartość przechowywana w węźle.
+    Node* left;       ///< Wskaźnik na lewe poddrzewo.
+    Node* right;      ///< Wskaźnik na prawe poddrzewo.
 
     /**
      * @brief Konstruktor węzła.
