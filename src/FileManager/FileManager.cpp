@@ -1,8 +1,12 @@
+/**
+ * @file FileManager.cpp
+ * @brief Implementacja metod klasy FileManager.
+ */
+
 #include "FileManager.h"
 #include <fstream>
 #include <iostream>
 
-// Zapis binarny (używamy podejścia preorder: zapisz węzeł, potem lewe, potem prawe)
 void FileManager::serializeBinary(Node* current, std::ofstream& outFile) {
     bool hasNode = (current != nullptr);
     outFile.write(reinterpret_cast<char*>(&hasNode), sizeof(hasNode));
@@ -25,7 +29,6 @@ void FileManager::saveBinary(const std::string& filename, const BST& bst) {
     }
 }
 
-// Odczyt binarny
 Node* FileManager::deserializeBinary(std::ifstream& inFile) {
     bool hasNode;
     if (!inFile.read(reinterpret_cast<char*>(&hasNode), sizeof(hasNode)) || !hasNode) {
@@ -43,7 +46,7 @@ Node* FileManager::deserializeBinary(std::ifstream& inFile) {
 void FileManager::loadBinary(const std::string& filename, BST& bst) {
     std::ifstream inFile(filename, std::ios::binary);
     if (inFile.is_open()) {
-        bst.clear(); // Czyszczenie starego drzewa przed wczytaniem
+        bst.clear();
         Node* newRoot = deserializeBinary(inFile);
         bst.setRoot(newRoot);
         inFile.close();
@@ -54,7 +57,6 @@ void FileManager::loadBinary(const std::string& filename, BST& bst) {
     }
 }
 
-// Wczytywanie z pliku tekstowego (dodawanie do istniejącego lub pustego drzewa)
 void FileManager::loadTextToBST(const std::string& filename, BST& bst) {
     std::ifstream inFile(filename);
     if (inFile.is_open()) {

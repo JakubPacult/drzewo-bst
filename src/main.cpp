@@ -1,14 +1,20 @@
+/**
+ * @file main.cpp
+ * @brief Główny plik programu obsługujący menu użytkownika.
+ */
+
 #include <iostream>
 #include <vector>
-#include <windows.h>
-#include "BST/BST.h"
-#include "FileManager/FileManager.h"
+#include "BST.h"
+#include "FileManager.h"
 
+ /**
+  * @brief Główna funkcja programu.
+  * @return int Kod wyjścia programu.
+  */
 int main() {
-    SetConsoleOutputCP(CP_UTF8);
-    SetConsoleCP(CP_UTF8);
     BST drzewo;
-    int choice;
+    int wybór;
 
     do {
         std::cout << "\n=== MENU DRZEWA BST ===\n";
@@ -23,12 +29,12 @@ int main() {
         std::cout << "9. Odczytaj drzewo z pliku binarnego\n";
         std::cout << "0. Wyjście\n";
         std::cout << "Wybierz opcje: ";
-        std::cin >> choice;
+        std::cin >> wybór;
 
-        switch (choice) {
+        switch (wybór) {
         case 1: {
             int val;
-            std::cout << "Podaj liczbie do dodania: ";
+            std::cout << "Podaj liczbe do dodania: ";
             std::cin >> val;
             drzewo.insert(val);
             std::cout << "Dodano.\n";
@@ -104,7 +110,7 @@ int main() {
         default:
             std::cout << "Nieznana opcja. Spróbuj ponownie.\n";
         }
-    } while (choice != 0);
+    } while (wybór != 0);
 
     return 0;
 }

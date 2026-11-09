@@ -1,3 +1,8 @@
+/**
+ * @file BST.cpp
+ * @brief Implementacja metod klasy BST.
+ */
+
 #include "BST.h"
 #include <iostream>
 #include <fstream>
@@ -20,7 +25,6 @@ void BST::setRoot(Node* newRoot) {
     root = newRoot;
 }
 
-// --- WSTAWIANIE ---
 Node* BST::insertRecursive(Node* current, int value) {
     if (current == nullptr) {
         return new Node(value);
@@ -38,7 +42,6 @@ void BST::insert(int value) {
     root = insertRecursive(root, value);
 }
 
-// --- USUWANIE ---
 Node* BST::findMin(Node* current) {
     while (current && current->left != nullptr) {
         current = current->left;
@@ -56,7 +59,6 @@ Node* BST::removeRecursive(Node* current, int value) {
         current->right = removeRecursive(current->right, value);
     }
     else {
-        // Przypadek 1: Brak dzieci lub jedno dziecko
         if (current->left == nullptr) {
             Node* temp = current->right;
             delete current;
@@ -68,7 +70,6 @@ Node* BST::removeRecursive(Node* current, int value) {
             return temp;
         }
 
-        // Przypadek 2: Dwoje dzieci
         Node* temp = findMin(current->right);
         current->data = temp->data;
         current->right = removeRecursive(current->right, temp->data);
@@ -80,7 +81,6 @@ void BST::remove(int value) {
     root = removeRecursive(root, value);
 }
 
-// --- CZYSZCZENIE ---
 void BST::destroyRecursive(Node* current) {
     if (current != nullptr) {
         destroyRecursive(current->left);
@@ -94,7 +94,6 @@ void BST::clear() {
     root = nullptr;
 }
 
-// --- SZUKANIE DROGI ---
 bool BST::findPathRecursive(Node* current, int value, std::vector<int>& path) {
     if (current == nullptr) return false;
 
@@ -109,7 +108,7 @@ bool BST::findPathRecursive(Node* current, int value, std::vector<int>& path) {
         if (findPathRecursive(current->right, value, path)) return true;
     }
 
-    path.pop_back(); // Usuń z ścieżki, jeśli to ślepa ulica
+    path.pop_back();
     return false;
 }
 
@@ -118,7 +117,6 @@ bool BST::findPath(int value, std::vector<int>& path) {
     return findPathRecursive(root, value, path);
 }
 
-// --- WYŚWIETLANIE ---
 void BST::preorderRecursive(Node* current) {
     if (current != nullptr) {
         std::cout << current->data << " ";
@@ -155,7 +153,6 @@ void BST::display(int method) {
     std::cout << "\n";
 }
 
-// --- ZAPIS TEKSTOWY ---
 void BST::saveTextRecursive(Node* current, std::ofstream& outFile) {
     if (current != nullptr) {
         outFile << current->data << " ";
