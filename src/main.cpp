@@ -15,8 +15,7 @@
   */
 int main() {
     // Informacja o wersji / commitcie widoczna przy starcie
-    std::cout << "[Wersja / Commit: f7c4e2a - BST App v1.2]\n";
-
+    std::cout << "=== Program do zarządzania drzewem BST w C++ ===\n";
     BST drzewo;
     int wybór;
 
