@@ -1,0 +1,54 @@
+\doxysection{BST.\+h}
+\hypertarget{_b_s_t_8h_source}{}\label{_b_s_t_8h_source}\index{src/BST/BST.h@{src/BST/BST.h}}
+\doxymbox{\hyperlink{_b_s_t_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_node_8h}{Node.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}{BST}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ root;\ }
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ insertRecursive(\doxymbox{\hyperlink{struct_node}{Node}}*\ current,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ removeRecursive(\doxymbox{\hyperlink{struct_node}{Node}}*\ current,\ \textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00023\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ findMin(\doxymbox{\hyperlink{struct_node}{Node}}*\ current);}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ destroyRecursive(\doxymbox{\hyperlink{struct_node}{Node}}*\ current);}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{bool}\ findPathRecursive(\doxymbox{\hyperlink{struct_node}{Node}}*\ current,\ \textcolor{keywordtype}{int}\ value,\ std::vector<int>\&\ path);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ preorderRecursive(\doxymbox{\hyperlink{struct_node}{Node}}*\ current);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ inorderRecursive(\doxymbox{\hyperlink{struct_node}{Node}}*\ current);}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ postorderRecursive(\doxymbox{\hyperlink{struct_node}{Node}}*\ current);}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ saveTextRecursive(\doxymbox{\hyperlink{struct_node}{Node}}*\ current,\ std::ofstream\&\ outFile);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \doxymbox{\hyperlink{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}{BST}}();}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00041\ \ \ \ \ \doxymbox{\hyperlink{class_b_s_t_abc17123a0367c3b8ad0382eeb3ad3178}{\string~BST}}();}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_a434822ba327e37a18db6e29a9aeabb08}{insert}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_a5ecfaa5038e8b25a46300747b3d53f20}{remove}}(\textcolor{keywordtype}{int}\ value);}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_ac4c25c29469df59a243c920423ed6d75}{clear}}();}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_b_s_t_a66e23d890fdf7ee1583427bf778c4f23}{findPath}}(\textcolor{keywordtype}{int}\ value,\ std::vector<int>\&\ path);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_ae0a2cd839fe9bff168f3112a83ac1cfe}{display}}(\textcolor{keywordtype}{int}\ method);}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_a10d8a5b1975b4105dda536bbaf3354f8}{saveToFileText}}(\textcolor{keyword}{const}\ std::string\&\ filename);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_b_s_t_a4d3ded5a59583af64a6e2b030cce08e3}{isEmpty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00085\ }
+\DoxyCodeLine{00090\ \ \ \ \ \doxymbox{\hyperlink{struct_node}{Node}}*\ \doxymbox{\hyperlink{class_b_s_t_a810fa02ccb9421de222e549e0d969bee}{getRoot}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_b_s_t_af38a08885b616b043517270887a4e334}{setRoot}}(\doxymbox{\hyperlink{struct_node}{Node}}*\ newRoot);}
+\DoxyCodeLine{00097\ \};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

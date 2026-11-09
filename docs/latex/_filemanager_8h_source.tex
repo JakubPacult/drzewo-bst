@@ -1,0 +1,27 @@
+\doxysection{Filemanager.\+h}
+\hypertarget{_filemanager_8h_source}{}\label{_filemanager_8h_source}\index{src/FileManager/Filemanager.h@{src/FileManager/Filemanager.h}}
+\doxymbox{\hyperlink{_filemanager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FILEMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FILEMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{_b_s_t_8h}{BST.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_file_manager}{FileManager}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ serializeBinary(\doxymbox{\hyperlink{struct_node}{Node}}*\ current,\ std::ofstream\&\ outFile);}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{static}\ \doxymbox{\hyperlink{struct_node}{Node}}*\ deserializeBinary(std::ifstream\&\ inFile);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_file_manager_a63b2adb723b3289c4f818c94c153c945}{saveBinary}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \textcolor{keyword}{const}\ \doxymbox{\hyperlink{class_b_s_t}{BST}}\&\ bst);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_file_manager_a1cf76a080a01483d88008d98acf5a698}{loadBinary}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \doxymbox{\hyperlink{class_b_s_t}{BST}}\&\ bst);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_file_manager_a87436bcb62520e9fcf3b32826267caba}{loadTextToBST}}(\textcolor{keyword}{const}\ std::string\&\ filename,\ \doxymbox{\hyperlink{class_b_s_t}{BST}}\&\ bst);}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
